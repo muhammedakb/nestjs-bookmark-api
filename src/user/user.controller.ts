@@ -4,7 +4,7 @@ import { GetUser } from '../auth/decorator';
 import { User } from '@prisma/client';
 import { UserDto } from './dto/user.dto';
 import { UserService } from './user.service';
-import { IsEmptyObjectPipe } from './pipes';
+import { IsEmptyObjectPipe } from '../pipes';
 
 @UseGuards(JwtGuard)
 @Controller('users')
