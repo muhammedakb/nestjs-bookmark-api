@@ -1,5 +1,6 @@
-import { BadRequestException, PipeTransform } from '@nestjs/common';
+import { BadRequestException, Injectable, PipeTransform } from '@nestjs/common';
 
+@Injectable()
 export class IsEmptyObjectPipe implements PipeTransform {
   transform(dto: Record<string, any>) {
     const values = Object.values(dto);
